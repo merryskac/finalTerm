@@ -8,7 +8,8 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors'
 
 mongoose.connect(process.env.MONGO_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true }).then(
+  { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(
     ()=>{console.log('connect to db')},
     err=>{console.log(err)}
   )
@@ -24,7 +25,7 @@ mongoose.connect(process.env.MONGO_URI,
 
 const app = express()
 app.use(cors({credentials: true, origin:'http://localhost:5173'}))
-// app.use(cors())
+
 app.use(express.json())
 app.use(cookieParser())
 
