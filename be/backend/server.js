@@ -7,6 +7,10 @@ import './routers/Account.js'
 import cookieParser from 'cookie-parser';
 import cors from 'cors'
 
+
+const app = express()
+// app.use(cors({credentials: true, origin:'http://localhost:5173'}))
+app.use(cors())
 mongoose.connect(process.env.MONGO_URI,
   { useNewUrlParser: true, useUnifiedTopology: true })
   .then(
@@ -23,9 +27,7 @@ mongoose.connect(process.env.MONGO_URI,
 //   console.log(error)
 // })
 
-const app = express()
-// app.use(cors({credentials: true, origin:'http://localhost:5173'}))
-app.use(cors())
+
 
 app.use(express.json())
 app.use(cookieParser())
