@@ -1,0 +1,3 @@
+db.apps.aggregate([{$lookup:{from: 'products',let:{id_video:'$_id'},pipeline:[{$addFields:{id_video:{$toObjectId:'$id_video'}}},{$match:{$expr:{$eq:['$id_video', '$$id_video']}}}],as:"details"}}])
+
+db.apps.aggregate([{$lookup:{from: 'products',let:{id_thumbnail:'$_id'},pipeline:[{$addFields:{id_thumbnail:{$toObjectId:'$id_thumbnail'}}},{$match:{$expr:{$eq:['$id_thumbnail', '$$id_thumbnail']}}}],as:"details"}}])
