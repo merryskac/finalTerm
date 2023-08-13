@@ -16,15 +16,15 @@ mongoose.connect(process.env.MONGO_URI,
             throw err;
         }
     })
-const database = mongoose.connection;
+// const database = mongoose.connection;
 
-database.once('connected',()=>{
-  console.log('Database Connected!')
-})
+// database.once('connected',()=>{
+//   console.log('Database Connected!')
+// })
 
-database.on('error',(error)=>{
-  console.log(error)
-})
+// database.on('error',(error)=>{
+//   console.log(error)
+// })
 
 const app = express()
 app.use(cors({credentials: true, origin:'http://localhost:5173'}))
