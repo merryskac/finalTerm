@@ -9,7 +9,16 @@ import cors from 'cors'
 
 
 const app = express()
-app.use(cors({credentials: true, 'Access-Control-Allow-Origin':'http://localhost:5173'}))
+app.use(cors({credentials: true, origin:'http://localhost:5173'}))
+
+app.use((req, res, next) => {
+  res.setHeader("http://192.168.1.8:5173");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 // app.use(cors())
 mongoose.connect(process.env.MONGO_URI)
   .then(
@@ -35,7 +44,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.get('/',(req,res)=>{
-  res.json('haloo')
+  res.json('haloo00')
 })
 app.use('/play',appRouters)
 
