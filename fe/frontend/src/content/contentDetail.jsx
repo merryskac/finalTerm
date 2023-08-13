@@ -11,7 +11,7 @@ import { useFetch } from "../hooks/useFetch";
 const Detail = () => {
   const id = useParams('id').id
   
-  const {response:data, pending, error} = useFetch('http://localhost:3000/play/thumbnails')
+  const {response:data, pending, error} = useFetch('https://final-term-j16omguj5-merryskac.vercel.app/play/thumbnails')
 
   const filter = data && data.thumbnails.filter(data=>{
     return data._id===id

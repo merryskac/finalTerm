@@ -11,10 +11,10 @@ import { usePost } from "../hooks/usePost";
 const CommentSection = () => {
   const [userComment, setComment] = useState(null)
   const id = useParams('id').id
-  const {response: comment, pending, error} = useFetch('http://localhost:3000/play/comments/'+id)
+  const {response: comment, pending, error} = useFetch('https://final-term-j16omguj5-merryskac.vercel.app/play/comments/'+id)
 
   const [user, setUser] = useContext(UserContext)
-  const url = 'http://localhost:3000/play/comments/'+id
+  const url = 'https://final-term-j16omguj5-merryskac.vercel.app/play/comments/'+id
   const [err, postData]=usePost()
   const [trackcomment, setTrackComment] = useState('null')
   

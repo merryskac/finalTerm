@@ -1,5 +1,5 @@
 export const login = (username, pass)=>{
-  const log = fetch('http://localhost:3000/play/login',{
+  const log = fetch('https://final-term-j16omguj5-merryskac.vercel.app/play/login',{
     credentials:'include',
     method:'POST',
     headers:{
@@ -18,7 +18,7 @@ export const login = (username, pass)=>{
 }
 
 export const register = (username, pass)=>{
-  const log = fetch('http://localhost:3000/play/register',{
+  const log = fetch('https://final-term-j16omguj5-merryskac.vercel.app/play/register',{
     credentials:'include',
     method:'POST',
     headers:{
