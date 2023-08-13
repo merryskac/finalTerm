@@ -1,9 +1,9 @@
 import express from 'express'
 import mongoose  from 'mongoose'
-import appRouters from './routers/channel.js';
-import vidRouters from './routers/product.js';
-import commentRouters from './routers/comment.js'
-import './routers/Account.js'
+import appRouters from '../routers/channel.js';
+import vidRouters from '../routers/product.js';
+import commentRouters from '../routers/comment.js'
+import '../routers/Account.js'
 import cookieParser from 'cookie-parser';
 import cors from 'cors'
 
