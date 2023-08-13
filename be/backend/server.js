@@ -8,10 +8,10 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors'
 
 mongoose.connect(process.env.MONGO_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true }).then((err, res)=>{
-    if(err){console.log(err)}
-    console.log('connect to db')
-  })
+  { useNewUrlParser: true, useUnifiedTopology: true }).then(
+    ()=>{console.log('connect to db')},
+    err=>{console.log(err)}
+  )
 // const database = mongoose.connection;
 
 // database.once('connected',()=>{
