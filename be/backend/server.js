@@ -11,8 +11,7 @@ import cors from 'cors'
 const app = express()
 // app.use(cors({credentials: true, origin:'http://localhost:5173'}))
 app.use(cors())
-mongoose.connect(process.env.MONGO_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI)
   .then(
     ()=>{console.log('connect to db')},
     err=>{console.log(err)}
@@ -27,7 +26,10 @@ mongoose.connect(process.env.MONGO_URI,
 //   console.log(error)
 // })
 
-
+app.use((req,res,next)=>{
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+  next()
+})
 
 app.use(express.json())
 app.use(cookieParser())
