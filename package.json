@@ -2,7 +2,6 @@
   "name": "final-term",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "install-server": "cd be && cd backend && npm install",
     "start-server":"cd be && cd backend && node server.js",
