@@ -320,37 +320,10 @@ content: ```{message: wrong password}```
     content: ```{message: price should be number}```
 
 ## HOW TO RUN
-1. Open your VSCode or terminal 
-2. Make sure you have installed "NodeJs". If you haven't, you   can get it here:\
-    NodeJS: https://nodejs.org/en
-3. Clone this repo locally in your computer using terminal
-\
-  ```git clone https://github.com/merryskac/PlayAPI.git ``` \
-  and then do on your terminal\
-  ```cd PlayAPI```
+1. This database is now running in my MongoDB Atlas, so it's accessible online.
+2. You can see this api in this link
+   https://final-term-git-main-wheytosharepalu-gmailcom.vercel.app/
+   use the instruction up there for the endpoints
 
-5. On your terminal, do
-```npm install``` to install necessary package for this program
-
-6. Make sure you have installed "MongoDB Compass" on your computer. You can get it from https://www.mongodb.com/products/compass
-
-7. On MongoDB Compass, connect to the Database with URI
- ```mongodb://localhost:27017``` OR ```mongodb://0.0.0.0:27017```
-
-8. On your terminal, type 
-```node server.js```
-
-9. On your terminal, there will be message
-```
-server Open!
-Database Connected!
-```
-
-9. Now you can use the API. the base URL is 
-```localhost:3000```\
-Make sure this port is clear.
-You can try with your browser, or Postman App, or terminal using curl.
-
-10. Once the program is running, this program automatically insert a document of data to the database if you don't have the same database. so, if you do (example) ```GET /play/thumbnail``` for the first time, even you have not insert any data yet, you will get document as a response.
 
 P.S. I hope this instruction is clear, and hopefully I can get max Grade for this mid term in this GIGIH 3.0 Program ✌
