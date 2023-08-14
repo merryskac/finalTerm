@@ -32,13 +32,16 @@ export const Login =async (req, res)=>{
 
     await AccountSchema.findByIdAndUpdate(getUsername._id, {refreshToken: refreshToken})
 
-    res.cookie('refreshToken', refreshToken, 
+    // res.cookie('refreshToken', refreshToken, 
+    // {
+    //   httpOnly: true, 
+    //   maxAge: 24*60*60*1000
+    // })
+    return res.cookie('refreshToken', refreshToken, 
     {
       httpOnly: true, 
       maxAge: 24*60*60*1000
-    })
-
-    return res.status(200).json({user: getUsername._id, username: getUsername.username, access_token: token})
+    }).status(200).json({user: getUsername._id, username: getUsername.username, access_token: token})
   }
   res.status(400).json({message: "wrong password"})
 }

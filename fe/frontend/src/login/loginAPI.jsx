@@ -1,7 +1,6 @@
 export const login = (username, pass)=>{
-  const log = fetch('https://final-term-8c769ilvz-merryskac.vercel.app/play/login',{
+  const log = fetch('https://final-term-c1di2e8vg-merryskac.vercel.app/play/login',{
     credentials:'include',
-    mode:'cors',
     method:'POST',
     headers:{
       'Content-Type': 'application/json'
@@ -19,9 +18,8 @@ export const login = (username, pass)=>{
 }
 
 export const register = (username, pass)=>{
-  const log = fetch('https://final-term-2ly51yo1y-merryskac.vercel.app/play/register',{
+  const log = fetch('https://final-term-c1di2e8vg-merryskac.vercel.app/play/register',{
     credentials:'include',
-    
     method:'POST',
     headers:{
       'Content-Type': 'application/json'
