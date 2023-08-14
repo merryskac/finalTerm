@@ -2,10 +2,10 @@
   "name": "mid-term",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "install-server": " cd backend && npm install",
-    "start-server":"cd backend && node server.js",
+    "install-server": "npm install",
+    "start-server":"node server.js",
     "start": "node server.js"
   },
   "author": "",
