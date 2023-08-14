@@ -1,5 +1,5 @@
 'use client'
-
+import Cookies from 'universal-cookie'
 import {
   Flex,
   Box,
@@ -52,7 +52,15 @@ export default function Login() {
         return
       }
       setUsername(data.username)
-      localStorage.setItem('access_token', data.access_token)
+      window.localStorage.setItem('access_token', data.access_token)
+      console.log(data)
+      console.log(localStorage.getItem('access_token'))
+      
+      const cookie = new Cookies()
+      cookie.set('refreshToken',data.refreshToken,{
+        path:'/'
+      })
+
       setAlert({
         message: null, 
         isLoading: false

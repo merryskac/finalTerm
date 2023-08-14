@@ -7,11 +7,11 @@ const Authorization= ({children}) => {
   const [isLogged, setIsLogged] = useContext(AuthContext)
   const [user, setUser] = useContext(UserContext)
   
-  if(isLogged === false ){    
-    window.localStorage.clear()
-    window.location.href='/login'
-    return
-  }
+  // if(isLogged === false ){    
+  //   window.localStorage.clear()
+  //   window.location.href='/login'
+  //   return
+  // }
   
   return (<Fragment>
     {children}

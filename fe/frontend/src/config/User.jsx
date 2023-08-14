@@ -14,6 +14,7 @@ const User = ({children}) => {
   
   useEffect(()=>{
     isLogged && cekToken().then(data=>{
+      console.log(data)
       if(data.accessToken){
         setUser(data.username)
         if(data.accessToken !== localStorage.getItem('access_token')){
@@ -21,8 +22,7 @@ const User = ({children}) => {
         }
       setIsLogged(true)
       }else{
-        
-        window.localStorage.clear()
+        // window.localStorage.clear()
         setIsLogged(false)
       }
     }).catch(err=>{
