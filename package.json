@@ -8,13 +8,16 @@
   },
   "scripts": {
     "install-server": "cd be && cd backend && npm install",
-    "start-server":"cd be && cd backend && node server.js",
-    "install-package1":"cd fe && npm install",
-    "install-client":"cd fe && npm install && cd frontend && npm install",
-    "build-client":"cd fe && cd frontend && npm run build",
-    "start-client":"cd fe && cd frontend && npm run preview"
+    "start-server": "cd be && cd backend && node server.js",
+    "install-package1": "cd fe && npm install",
+    "install-client": "cd fe && npm install && cd frontend && npm install",
+    "build-client": "cd fe && cd frontend && npm run build",
+    "start-client": "cd fe && cd frontend && npm run preview"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vercel": "^31.2.3"
+  }
 }

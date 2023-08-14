@@ -32,3 +32,5 @@ dist-ssr
 build
 
 /coverage
+# Local Netlify folder
+.netlify
