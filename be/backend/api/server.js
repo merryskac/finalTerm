@@ -10,7 +10,7 @@ import cors from 'cors'
 
 const app = express()
 
-app.use(cors({credentials: true, origin:'https://final-fe-git-main-wheytosharepalu-gmailcom.vercel.app', optionsSuccessStatus: 200, methods:['GET','POST'],allowedHeaders:['X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization']}))
+// app.use(cors({credentials: true, origin:'https://final-fe-git-main-wheytosharepalu-gmailcom.vercel.app', optionsSuccessStatus: 200, methods:['GET','POST'],allowedHeaders:['X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization']}))
 
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "http://192.168.1.8:5173/");
