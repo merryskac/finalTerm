@@ -10,7 +10,7 @@ import cors from 'cors'
 
 const app = express()
 
-// app.use(cors({credentials: true, origin:'*'}))
+app.use(cors({credentials: true, origin:'http://localho.st:5173/'}))
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localho.st:5173/");
   res.header(
@@ -19,7 +19,6 @@ app.use((req, res, next) => {
   );
   next();
 });
-
 
 
 
