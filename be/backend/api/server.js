@@ -10,7 +10,7 @@ import cors from 'cors'
 
 const app = express()
 
-app.use(cors({credentials: true, origin:'http://192.168.1.8:5173'}))
+app.use(cors({credentials: true, origin:'http://192.168.1.8:5173', optionsSuccessStatus: 200}))
 
 // app.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "http://192.168.1.8:5173/");
@@ -39,10 +39,10 @@ mongoose.connect(process.env.MONGO_URI)
 //   console.log(error)
 // })
 
-app.use((req,res,next)=>{
-  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
-  next()
-})
+// app.use((req,res,next)=>{
+//   res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+//   next()
+// })
 
 app.use(express.json())
 app.use(cookieParser())
