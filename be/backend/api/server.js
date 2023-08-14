@@ -48,7 +48,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.get('/',(req,res)=>{
-  res.json('haloo00')
+  res.json('haloo00jhhh')
 })
 app.use('/play',appRouters)
 

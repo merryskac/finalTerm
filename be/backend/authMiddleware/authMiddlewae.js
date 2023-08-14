@@ -43,7 +43,6 @@ export const checkToken =  (req, res) =>{
   
   jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET,(err, decoded)=>{
     if(err){
-      
       if(err.name==='TokenExpiredError'){
         const updateDb = async()=>{
           const data = await AccountSchema.findOneAndUpdate({refreshToken: refreshToken},{refreshToken: null})
