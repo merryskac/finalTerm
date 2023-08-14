@@ -7,6 +7,6 @@ channelRouters.post('/login', Login)
 channelRouters.post('/register', Register)
 channelRouters.get('/logout', Logout)
 channelRouters.get('/token', refreshToken)
-channelRouters.get('/cektoken', checkToken)
+channelRouters.post('/cektoken', checkToken)
 
 export default channelRouters

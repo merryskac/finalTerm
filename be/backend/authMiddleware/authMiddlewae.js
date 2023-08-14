@@ -38,7 +38,7 @@ export const verifyToken = (req,res,next)=>{
 export const checkToken =  (req, res) =>{
   const authHeader = req.headers['authorization']
   const accessToken = authHeader && authHeader.split(' ')[1]
-  const refreshToken = req.cookies.refreshToken
+  const refreshToken = req.body.refreshToken
   const nullObj = null
   
   jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET,(err, decoded)=>{
