@@ -9,13 +9,13 @@ import { useEffect } from "react";
 
 
 const Content = () => {
-  const {response, pending, error} = useFetch('https://final-term-git-main-merryskac.vercel.app/play/thumbnails')
+  const {response, pending, error} = useFetch('https://final-proj-blond.vercel.app/play/thumbnails')
   const [search, setSearch] = useState(null)
   const [searchData, setSearchData] = useState(null)
   const [result, setResult] = useState(null)
 
   console.log(localStorage.getItem('access_token'))
-  
+
   useEffect(()=>{
     const responses = search && response && response.thumbnails.filter(data=>data.title.toLowerCase().indexOf(search)!==-1)
     setSearchData(responses)

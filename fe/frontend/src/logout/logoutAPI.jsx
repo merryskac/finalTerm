@@ -1,5 +1,5 @@
 export const logout = () =>{
-  const out = fetch('http://localhost:3000/play/logout',{
+  const out = fetch('https://final-proj-blond.vercel.app/play/logout',{
     credentials: 'include'
   }).then(
     data=>data.json()
