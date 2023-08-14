@@ -5,7 +5,7 @@ import Detail from "../content/contentDetail";
 import Dashboard from "../dashboard/dashboard";
 import Login from "../login/Login";
 import Logout from "../logout/logout";
-import Register from "../register/register";
+import Register from "../register/Register";
 
 const Routers = () => {
   return ( 
