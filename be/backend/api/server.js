@@ -11,14 +11,14 @@ import cors from 'cors'
 const app = express()
 
 app.use(cors({credentials: true, origin:'http://192.168.1.8:5173/'}))
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://192.168.1.8:5173/");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "http://192.168.1.8:5173/");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
 
 
 

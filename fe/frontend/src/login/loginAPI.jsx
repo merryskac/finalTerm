@@ -19,7 +19,7 @@ export const login = (username, pass)=>{
 }
 
 export const register = (username, pass)=>{
-  const log = fetch('https://final-term-pjbuacsa6-merryskac.vercel.app/play/register',{
+  const log = fetch('https://final-term-keyvsg0tr-merryskac.vercel.app/play/register',{
     credentials:'include',
     method:'POST',
     headers:{
