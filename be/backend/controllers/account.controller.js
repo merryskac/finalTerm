@@ -41,7 +41,7 @@ export const Login =async (req, res)=>{
     {
       httpOnly: true, 
       maxAge: 24*60*60*1000
-    }).status(200).json({user: getUsername._id, username: getUsername.username, access_token: token})
+    }).status(200).json({user: getUsername._id, username: getUsername.username, access_token: token, refreshToken:refreshToken})
   }
   res.status(400).json({message: "wrong password"})
 }

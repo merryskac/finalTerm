@@ -1,6 +1,6 @@
 export const cekToken = () =>{
   try{
-  const cek = fetch('https://final-term-c1di2e8vg-merryskac.vercel.app/play/cektoken',{
+  const cek = fetch('https://final-term-3nl1gc3zj-merryskac.vercel.app/play/cektoken',{
     credentials:'include',
     headers:{
       authorization: "Bearer "+localStorage.getItem('access_token')

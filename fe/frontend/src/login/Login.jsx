@@ -71,7 +71,7 @@ export default function Login() {
         <Stack align={'center'}>
           <Heading fontSize={'4xl'} color='green.400'>Sign in to your account</Heading>
           <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy all discounts
+            to enjoy all discounts 
           </Text>
 
           {alert.isLoading&&<Text fontSize={'small'} >...Loading</Text>}
