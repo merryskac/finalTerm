@@ -7,13 +7,11 @@ import Routers from './router/Routers'
 
 function App() {
   return (
-    <ChakraProvider>
       <Authentication>
         <User>
           <Routers/>
         </User>
       </Authentication>
-    </ChakraProvider>
   )
 }
 
