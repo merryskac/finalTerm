@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "install-server": "cd be && cd backend && npm install",
-    "start-server":"cd be && cd backend && node server.js",
+    "install-server": " cd backend && npm install",
+    "start-server":"cd backend && node server.js",
     "start": "node server.js"
   },
   "author": "",
